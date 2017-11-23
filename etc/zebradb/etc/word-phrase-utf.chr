@@ -1,340 +1,487 @@
-# Generic character map for Latin and Greek characters.
+# Generic search equivanence character map for Latin languages (English, French, etc.)
 
 # Define the basic value-set. *Beware* of changing this without re-indexing
 # your databases.
 encoding utf-8
 
 # basic character set
-lowercase {0-9}{a-z}αβγδεζηθικλμνξοπρστυφχψω
-uppercase {0-9}{A-Z}ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ
+#lowercase {0-9}αἀἄβγδεἐἑέἔζηθικλμνξοόὀπρστυφχψω{a-z}
+#uppercase {0-9}ΑἈΒΓΔΕἘἙΈἜΖΗΘΙΊΚΛΜΝΞΟὉΠΡΣΤΥΦΧΨΩ{A-Z}
 
-# Breaking characters
-space {\001-\040}!"#$%&'\()*+,-./:;<=>?@\[\\]^_`\{|}~’{\x88-\x89}{\x98-\x9C}¡¿«»
+#
+#GREEK LATIN RUSSIAN 
+#
+lowercase {0-9}{α-ω}{a-z}абвгґдеэєжзіїийклмнопрстуфхцчшщьыъюяёў
+uppercase {0-9}{Α-Ω}{A-Z}АБВГҐДЕЭЄЖЗІЇИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЮЯЁЎ
 
-# Characters to be considered equivalent
-equivalent aáàãåâăąȧǎȁȃ
-equivalent Æӕä(ae)
-equivalent ā(aa)
-equivalent iíìîịĩĭįǐȉȋ
-equivalent ï(ie)
-equivalent ī(ii)
-equivalent uúùûũŭųűǔȕȗ
-equivalent ü(ue)
-equivalent ū(uu)
-equivalent eéèêẽĕęėěȅȇ
-equivalent ëē(ee)
-equivalent oóòõôŏǫȯőǒȍȏ
-equivalent Œœöø(oe)
-equivalent ō(oo)
-equivalent αάΑΆ(α΄)(Α΄)
-equivalent εέΕΈ(ε΄)(Ε΄)
-equivalent ιίϊΙΊΪ(ι΄)(Ι΄)
-equivalent ηήΗΉ(η΄)(Η΄)
-equivalent οόΟΌ(ο΄)(Ο΄)
-equivalent υύϋΥΎΫ(υ΄)(Υ΄)
-equivalent ωώΩΏ(ω΄)(Ω΄)
-equivalent Σσς
+#lowercase {0-9}{a-z}{α-ω}
+#uppercase {0-9}{A-Z}{Α-Ω}
 
-# Supplemental mappings
-# mapping diacritics to plain ASCII
-# A
-map ā			a
-map Ā			a
-map á			a
-map Á			a
-map à			a
-map À			a
-map ã			a
-map Ã			a
-map å			a
-map Å			a
-map â			a
-map Â			a
-map ä			a
-map Ä			a
-map ă			a
-map Ă			a
-map ą			a
-map Ą			a
-map ȧ			a
-map Ȧ			a
-map ǎ			a
-map Ǎ			a
-map ȁ			a
-map Ȁ			a
-map ȃ			a
-map Ȃ			a
-map ⱥ			a
-map Ⱥ			a
-# AE
-map ӕ			(ae)
-map Ӕ			(ae)
-# I
-map ī			i
-map Ī			i
-map ï			i
-map Ï			i
-map î			i
-map Î			i
-map í			i
-map Í			i
-map ì			i
-map Ì			i
-map ị			i
-map Ị			i
-map ĩ			i
-map Ĩ			i
-map ĭ			i
-map Ĭ			i
-map į			i
-map Į			i
-map ǐ			i
-map Ǐ			i
-map ȉ			i
-map Ȉ			i
-map ȋ			i
-map Ȋ			i
-map ɨ			i
-map Ɨ			i
-# U
-map ū			u
-map Ū			u
-map ü			u
-map Ü			u
-map ù			u
-map Ù			u
-map ú			u
-map Ú			u
-map û			u
-map Û			u
-map ũ			u
-map Ũ			u
-map ŭ			u
-map Ŭ			u
-map ų			u
-map Ų			u
-map ű			u
-map Ű			u
-map ǔ			u
-map Ǔ			u
-map ȕ			u
-map Ȕ			u
-map ȗ			u
-map Ȗ			u
-map ʉ			u
-map Ʉ			u
-map ů			u
-map Ů			u
-# E
-map ê			e
-map Ê			e
-map ë			e
-map Ë			e
-map é			e
-map É			e
-map è			e
-map È			e
-map ē			e
-map Ē			e
-map ẽ			e
-map Ẽ			e
-map ĕ			e
-map Ĕ			e
-map ę			e
-map Ę			e
-map ė			e
-map Ė			e
-map ě			e
-map Ě			e
-map ȅ			e
-map Ȅ			e
-map ȇ			e
-map Ȇ			e
-map ɇ			e
-map Ɇ			e
-# O
-map ô			o
-map Ô			o
-map ó			o
-map Ó			o
-map ò			o
-map Ò			o
-map ö			o
-map Ö			o
-map õ			o
-map Õ			o
-map ø			o
-map Ø			o
-map ō			o
-map Ō			o
-map ǒ			o
-map Ǒ			o
-map ŏ			o
-map Ŏ			o
-map ǫ			o
-map Ǫ			o
-map ȯ			o
-map Ȯ			o
-map ő			o
-map Ő			o
-map ȍ			o
-map Ȍ			o
-map ȏ			o
-map Ȏ			o
-map Œ			(oe)
-map œ			(oe)
-# R
-map ṛ			r
-map Ṛ			r
-map r̥			r
-map R̥			r
-map ṝ			r
-map Ṝ			r
-map ř			r
-map Ř			r
-map ṟ			r
-map ɍ			r
-map Ɍ			r
-# L
-map ḷ			l
-map Ḷ			l
-map ḹ			l
-map Ḹ			l
-map ḻ			l
-map Ḻ			l
-map ł			l
-map Ł			l
-# N
-map ṅ			n
-map Ṅ			n
-map ñ			n
-map Ñ			n
-map ǹ			n
-map Ǹ			n
-map ń			n
-map Ń			n
-map ṉ			n
-map Ṉ			n
-map ṇ			n
-map Ṇ			n
-# T
-map ṭ			t
-map Ṭ			t
-map ŧ			t
-map Ŧ			t
-# D
-map ḍ			d
-map Ḍ			d
-map đ			d
-map Đ			d
-map ð			d
-# S
-map ś			s
-map Ś			s
-map ṣ			s
-map Ṣ			s
-map ş			s
-map Ş			s
-map š			s
-map Š			s
-map ṡ			s
-map Ṡ			s
-# M
-map ṁ			m
-map Ṁ			m
-map ṃ			m
-map Ṃ			m
-# H
-map ḥ			h
-map Ḥ			h
-map ẖ			h
-map ħ			h
-map Ħ			h
-# Z
-map ź			z
-map Ź			z
-map ẓ			z
-map Ẓ			z
-map ż			z
-map Ż			z
-map ƶ			z
-map Ƶ			z
-#C
-map ç			c
-map Ç			c
-map ć			c
-map Ć			c
-map č			c
-map Č			c
-map ȼ			c
-map Ȼ			c
-map Ċ			c
-map ċ			c
-map Ĉ			c
-map ĉ			c
-# G
-map ǥ			g
-map Ǥ			g
-map ġ			g
-map Ġ			g
-map ǧ			g
-map Ǧ			g
-map ğ			g
-map Ğ			g
-# K
-map ḵ			k
-map Ḵ			k
-map Ḱ			k
-map ḱ			k
-# Y
-map ý			y
-map Ý			y
-map ɏ			y
-map Ɏ			y
 
-## mapping diacritics to plain on greek characters
-map ά           α
-map Ά           α
-map έ           ε
-map Έ           ε
-map ί           ι
-map Ί           ι
-map ή           η
-map Ή           η
-map ό           ο
-map Ό           ο
-map ύ           υ
-map Ύ           υ
-map ώ           ω
-map Ώ           ω
-map Σ           σ
-map ς           σ
+space {\001-\040}!"#$%&'\()*+,-./:;<=>?@\[\\]^_`\{|}~
 
-# mapping blank string
-map (^impr\s)       @
-map (^impr\.)       @
-map (^Impr\s)       @
-map (^Impr\.)       @
-map (^IMPR\s)       @
-map (^IMPR\.)       @
-map (^DL\s)         @
-map (^DL\.)         @
-map (^Dl\s)         @
-map (^Dl\.)         @
-map (^dl\s)         @
-map (^dl\.)         @
-map (^cop\s)        @
-map (^cop\.)        @
-map (^Cop\s)        @
-map (^Cop\.)        @
-map (^COP\s)        @
-map (^COP\.)        @
-map (^c\s)          @
-map (^C\s)          @
-map (^\[sd\])       @
-map (^\[s\.d\.\])   @
-map (^\[Sd\])       @
-map (^\[S\.d\.\])   @
-map (^\[SD\])       @
-map (^\[S\.D\.\])   @
+# ----- Greek ---------------------------
+equivalent ἀἁἂἃἄἅἆἇἈἉἊἋἌἍἎἏᾈᾉᾊᾋᾌᾍᾎᾏᾀᾁᾂᾃᾄᾅᾆᾇὰάᾰᾱᾲᾳᾴᾶᾷᾸᾹᾺΆᾼ(α)
+equivalent ἐἑἒἓἔἕἘἙἚἛἜἝὲέῈΈ(ε)
+equivalent ἠἡἢἣἤἥἦἧἨἩἪἫἬἭἮἯᾐᾑᾒᾓᾔᾕᾖᾗᾘᾙᾚᾛᾜᾝᾞᾟᾠὴήῂῃῄῆῇῌῊΉ(η)
+equivalent ἰἱἲἳἴἵἶἷἸἹἺἻἼἽἾἿὶίῐῑῒΐῖῗῘῙῚΊ(ι)
+equivalent ὀὁὂὃὄὅὈὉὊὋὌὍὸό(ο)
+equivalent ὐὑὒὓὔὕὖὗὙὛὝὟὺύῠῡῢΰῦῧῨῩῪΎ(υ)
+equivalent ὠὡὢὣὤὥὦὧὨὩὪὫὬὭὮὯὼώᾡᾢᾣᾤᾥᾦᾧᾨᾩᾪᾫᾬᾭᾮᾯῲῳῴῶῷῸΌῺΏῼ(ω)
+equivalent (σ)ςΣ
+#----------------------------------------
 map (\x88.*\x89))   @
+#---------------------------------------- 
+# Μονοτονικοί
+#
+map ά	α
+map έ	ε
+map ύ	υ
+map ό	ο
+map ή	η
+map ί	ι
+map ώ	ω
+map Ά	Α
+map Έ	Ε
+map Ύ	Υ
+map Ό	Ο
+map Ή	Η
+map Ί	Ι
+map Ώ	Ω
+#map ς	σ
+
+#
+# We used the http://www.fileformat.info/info/unicode/block/greek_extended/list.htm 
+# to create the table maps bellow and the equivalents  
+#
+# Πολυτονικοί
+#
+#
+# koronis
+map (&#8125;)   @
+# #psili
+map (&#8127;)   @
+# #oxeia
+map (&#8189;)   @
+# #daseia 
+map (&#8190;)   @
+# #vareia 
+map (&#8175;)   @
+# #GREEK DASIA AND PERISPOMENI
+map (&#8159;)   @
+#
+map ἀ	α
+map ἁ	α
+map ἂ	α
+map ἃ	α
+map ἄ	α
+map ἅ	α
+map ἆ	α
+map ἇ	α
+map Ἀ	Α
+map Ἁ	Α
+map Ἂ	Α
+map Ἃ	Α
+map Ἄ	Α
+map Ἅ	Α
+map Ἆ	Α
+map Ἇ	Α
+map ἐ	ε
+map ἑ	ε
+map ἒ	ε
+map ἓ	ε
+map ἔ	ε
+map ἕ	ε
+map Ἐ	Ε
+map Ἑ	Ε
+map Ἒ	Ε
+map Ἓ	Ε
+map Ἔ	Ε
+map Ἕ	Ε
+map ἠ	η
+map ἡ	η
+map ἢ	η
+map ἣ	η
+map ἤ	η
+map ἥ	η
+map ἦ	η
+map ἧ	η
+map Ἠ	Η
+map Ἡ	Η
+map Ἢ	Η
+map Ἣ	Η
+map Ἤ	Η
+map Ἥ	Η
+map Ἦ	Η
+map Ἧ	Η
+map ἰ	ι
+map ἱ	ι
+map ἲ	ι
+map ἳ	ι
+map ἴ	ι
+map ἵ	ι
+map ἶ	ι
+map ἷ	ι
+map Ἰ	Ι
+map Ἱ	Ι
+map Ἲ	Ι
+map Ἳ	Ι
+map Ἴ	Ι
+map Ἵ	Ι
+map Ἶ	Ι
+map Ἷ	Ι
+map ὀ	ο
+map ὁ	ο
+map ὂ	ο
+map ὃ	ο
+map ὄ	ο
+map ὅ	ο
+map Ὀ	Ο
+map Ὁ	Ο
+map Ὂ	Ο
+map Ὃ	Ο
+map Ὄ	Ο
+map Ὅ	Ο
+map ὐ	υ
+map ὑ	υ
+map ὒ	υ
+map ὓ	υ
+map ὔ	υ
+map ὕ	υ
+map ὖ	υ
+map ὗ	υ
+map Ὑ	υ
+map Ὓ	Υ
+map Ὕ	Υ
+map Ὗ	Υ
+map ὠ	ω
+map ὡ	ω
+map ὢ	ω
+map ὣ	ω
+map ὤ	ω
+map ὥ	ω
+map ὦ	ω
+map ὧ	ω
+map Ὠ	Ω
+map Ὡ	Ω
+map Ὢ	Ω
+map Ὣ	Ω
+map Ὤ	Ω
+map Ὥ	Ω
+map Ὦ	Ω
+map Ὧ	Ω
+map ὰ	α
+map ά	α
+map ὲ	ε
+map έ	ε
+map ὴ	η
+map ή	η
+map ὶ	ι
+map ί	ι
+map ὸ	ο
+map ό	ο
+map ὺ	υ
+map ύ	υ
+map ὼ	ω
+map ώ	ω
+map ᾀ	α
+map ᾁ	α
+map ᾂ	α
+map ᾃ	α
+map ᾄ	α
+map ᾅ	α
+map ᾆ	α
+map ᾇ	α
+map ᾈ	Α
+map ᾉ	Α
+map ᾊ	Α
+map ᾋ	Α
+map ᾌ	Α
+map ᾍ	Α
+map ᾎ	Α
+map ᾏ	Α
+map ᾐ	η
+map ᾑ	η
+map ᾒ	η
+map ᾓ	η
+map ᾔ	η
+map ᾕ	η
+map ᾖ	η
+map ᾗ	η
+map ᾘ	Η
+map ᾙ	Η
+map ᾚ	Η
+map ᾛ	Η
+map ᾜ	Η
+map ᾝ	Η
+map ᾞ	Η
+map ᾟ	Η
+map ᾠ	ω
+map ᾡ	ω
+map ᾢ	ω
+map ᾣ	ω
+map ᾤ	ω
+map ᾥ	ω
+map ᾦ	ω
+map ᾧ	ω
+map ᾨ	Ω
+map ᾩ	Ω
+map ᾪ	Ω
+map ᾫ	Ω
+map ᾬ	Ω
+map ᾭ	Ω
+map ᾮ	Ω
+map ᾯ	Ω
+map ᾰ	α
+map ᾱ	α
+map ᾲ	α
+map ᾳ	α
+map ᾴ	α
+map ᾶ	α
+map ᾷ	α
+map Ᾰ	Α
+map Ᾱ	Α
+map Ὰ	Α
+map Ά	Α
+map ᾼ	Α
+map ῂ	η
+map ῃ	η
+map ῄ	η
+map ῆ	η
+map ῇ	η
+map Ὲ	Ε
+map Έ	Ε
+map Ὴ	Η
+map Ή	Η
+map ῌ	Η
+map ῐ	ι
+map ῑ	ι
+map ῒ	ι
+map ΐ	ι
+map ῖ	ι
+map ῗ	ι
+map Ῐ	Ι
+map Ῑ	Ι
+map Ὶ	Ι
+map Ί	Ι
+map ῠ	υ
+map ῡ	υ
+map ῢ	υ
+map ΰ	υ
+map ῦ	υ
+map ῧ	υ
+map Ῠ	Υ
+map Ῡ	Υ
+map Ὺ	Υ
+map Ύ	Υ
+map Ῥ	Ρ
+map ῲ	ω
+map ῳ	ω
+map ῴ	ω
+map ῶ	ω
+map ῷ	ω
+map Ὸ	Ο
+map Ό	Ο
+map Ὼ	Ω
+map Ώ	Ω
+map ῼ	Ω
+
+#
+# ΑΓΓΛΙΚΑ ΑΡΘΡΑ 
+# 
+map (^The\s)    @
+map (^the\s)    @
+map (^a\s)      @
+map (^A\s)      @
+map (^An\s)     @
+map (^an\s)     @
+#
+# ΓΑΛΛΙΚΑ
+#
+map É	E
+map (^Le\s)    @
+map (^La\s)    @
+map (^Les\s)      @
+map (^Un\s)      @
+map (^Une\s)     @
+map (^De\s)     @
+map (^Des\s)     @
+map (^L')     @
+map (^D')     @
+
+#slavic polish etc
+#
+map ŚṢŚ			S
+map âàáäÂÀÂÄĄą		a
+map ĘęêèéëÊÈÉËĕ         e
+map îïíÎÏ               i
+map ÓóôöóÔÖ             o
+map ûùüÛÜÙ       	u
+map çÇĆć       		c
+map Ř̆			R
+map Łł			L
+map Ńń			N
+map ŹźŻż		Z
+#
+# ΕΛΛΗΝΙΚΑ
+#
+map (^«.*»)	@
+map (^\xC2.*\xBB)       @
+
+map (^Ὁ\s)	@
+map (^Ο\s)	@
+map (^Η\s)	@
+map (^Ἡ\s)	@
+map (^Οι\s)	@
+map (^Οί\s)	@
+map (^Οἱ\s)	@
+map (^Με\s)	@
+map (^Μέ\s)	@
+map (^Τό\s)	@
+map (^Τό\s)	@
+map (^Το\s)	@
+map (^Τα\s)	@
+map (^Τά\s)	@
+map (^Τών\s) 	@
+map (^Των\s) 	@
+map (^Τούς\s)	@
+map (^Τους\s)	@
+map (^Αι\s)	@
+map (^Αί\s)	@
+
+#
+# Collected 
+#
+
+map (^a\s)	@
+map (^A\s)	@
+map (^Al\s)	@
+map (^Alla\s)	@
+map (^An\s)	@
+map (^Da\s)	@
+map (^Das\s)	@
+map (^De\s)	@
+map (^Dei\s)	@
+map (^Den\s)	@
+map (^Der\s)	@
+map (^Des\s)	@
+map (^Det\s)	@
+map (^Die\s)	@
+map (^Ein\s)	@
+map (^Eine\s)	@
+map (^El\s)	@
+map (^H\s)	@
+map (^῾H\s)	@
+map (^I\s)	@
+map (^Il\s)	@
+map (^Je\s)	@
+map (^L\s)	@
+map (^L'\s)	@
+map (^L’\s)	@
+map (^La\s)	@
+map (^Las\s)	@
+map (^le\s)	@
+map (^Le\s)	@
+map (^[Le\s)	@
+map (^Les\s)	@
+map (^Li\s)	@
+map (^Los\s)	@
+map (^No\s)	@
+map (^O\s)	@
+map (^ʿO\s)	@
+map (^῾O\s)	@
+map (^Oἱ\s)	@
+map (^the\s)	@
+map (^The\s)	@
+map (^To\s)	@
+map (^Toῖς\s)	@
+map (^Tα\s)	@
+map (^Tό\s)	@
+map (^Un\s)	@
+map (^Una\s)	@
+map (^Une\s)	@
+map (^Αἱ\s)	@
+map (^Αι\s)	@
+map (^Αἱ\s)	@
+map (^Ανα\s)	@
+map (^Από\s)	@
+map (^Αυτός\s)	@
+map (^Ἐγώ\s)	@
+map (^Είμαστε\s)	@
+map (^Εἰς\s)	@
+map (^Εμοί\s)	@
+map (^Εν\s)	@
+map (^Ἐν\s)	@
+map (^Ενα\s)	@
+map (^Ένα\s)	@
+map (^Ένας\s)	@
+map (^Επί\s)	@
+map (^Ἔχεις\s)	@
+map (^Έχω\s)	@
+map (^Η\s)	@
+map (^"Η\s)	@
+map (^"Ἡ\s)	@
+map (^ʿΗ\s)	@
+map (^῾Η\s)	@
+map (^Η'\s)	@
+map (^Ἡ\s)	@
+map (^Ἤ\s)	@
+map (^Θα\s)	@
+map (^Ι\s)	@
+map (^Και\s)	@
+map (^Κι\s)	@
+map (^Με\s)	@
+map (^Μετά\s)	@
+map (^Μή\s)	@
+map (^Μια\s)	@
+map (^Μία\s)	@
+map (^Μιά\s)	@
+map (^Νῦν\s)	@
+map (^Ο\s)	@
+map (^"Ο\s)	@
+map (^ʿΟ\s)	@
+map (^῾Ο\s)	@
+map (^Ὁ\s)	@
+map (^Οἱ\s)	@
+map (^Οι\s)	@
+map (^"Οι\s)	@
+map (^Οἱ\s)	@
+map (^Όλα\s)	@
+map (^Περί\s)	@
+map (^Πρώτα\s)	@
+map (^Σ'\s)	@
+map (^Σαν\s)	@
+map (^Σε\s)	@
+map (^Στα\s)	@
+map (^Στη\s)	@
+map (^Στην\s)	@
+map (^Στο\s)	@
+map (^Στον\s)	@
+map (^Στόν\s)	@
+map (^Τ'\s)	@
+map (^Τ’\s)	@
+map (^Τ΄\s)	@
+map (^Τhe\s)	@
+map (^Τo\s)	@
+map (^Τα\s)	@
+map (^Τά\s)	@
+map (^Τη\s)	@
+map (^Τή\s)	@
+map (^Την\s)	@
+map (^Τήν\s)	@
+map (^Της\s)	@
+map (^Τῆς\s)	@
+map (^Τι\s)	@
+map (^Τις\s)	@
+map (^Το\s)	@
+map (^Το'\s)	@
+map (^Τό\s)	@
+map (^Τό\s)	@
+map (^Τον\s)	@
+map (^Τόν\s)	@
+map (^Του\s)	@
+map (^Τοῦ\s)	@
+map (^Τσε\s)	@
+map (^Τῷ\s)	@
+map (^Των\s)	@
+
